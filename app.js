@@ -1,18 +1,8 @@
 var app = angular.module("myApp", []);
 
-app.directive("nprLink", function() {
+app.directive("searchInput", function() {
   return {
-    restrict: 'EA',
-    require: ['^ngModel'],
-    replace: true,
-    scope: {
-      ngModel: '=',
-      playerDir: '=playerAttr'
-    },
-    templateUrl: 'views/nprListItem.html',
-    link: function(scope, ele, attr) {
-      scope.duration = scope.ngModel.audio[0].duration.$text;
-    }
+    templateUrl: 'AutoCompleteInput.html'
   };
 });
 
