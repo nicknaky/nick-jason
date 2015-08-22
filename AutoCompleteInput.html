@@ -1,9 +1,12 @@
 
 <span>Search:</span>
-<input type="text" placeholder="Start Typing" id="searchInput" name="search">
+<input type="text" placeholder="Start Typing" id="searchInput" name="search" ng-model="searchText" ng-keyup="query(searchText)">
 <p>google-places is set to: {{placesMode}}</p>
 <p>API key is: {{apiKey}}</p>
-
+<p>You are searching for: {{searchText}}</p>
+<p>Current local storage: {{inputData}}</p>
 <ul id="suggestions" class="suggestions-list">
 	<li ng-repeat="suggestion in suggestions" >{{suggestion}}</li>
 </ul>
+<ul id="resultsList">
+	</ul>

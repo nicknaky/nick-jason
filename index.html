@@ -10,7 +10,14 @@
 <body ng-app="myApp" ng-controller="MainCtrl">
 
 	<p>hi {{test}}</p>
-	<search-input google-places="false" api-key="{{API}}"></search-input>
+	<search-input 
+		input-data="dataList"
+
+		google-places="false" 
+		api-key="{{API}}">
+	</search-input>
+	<ul id="resultsList">
+	</ul>
 </body>
 
 </html>
