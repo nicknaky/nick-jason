@@ -28,6 +28,8 @@ app.directive("searchInput", function() {
         console.log("scope.query is running");
         console.log("scope.inputData: " + scope.inputData);
         console.log("input: " + input);
+        console.log("googlePlaces: "+ scope.placesMode);
+        
         var list = document.getElementById("resultsList");
         while (list.firstChild) {
             list.removeChild(list.firstChild);
@@ -47,3 +49,5 @@ app.directive("searchInput", function() {
     }
   };
 });
+
+
