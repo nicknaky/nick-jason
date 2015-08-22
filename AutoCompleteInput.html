@@ -1,8 +1,9 @@
-<p>AutoComplete</p>
-<form>
-    Search: <br>
-    <input type="text" placeholder="Start Typing" id="searchInput" name="search">
-</form>
+
+<span>Search:</span>
+<input type="text" placeholder="Start Typing" id="searchInput" name="search">
+<p>google-places is set to: {{placesMode}}</p>
+<p>API key is: {{googlePlacesApi}}</p>
+
 <ul id="suggestions" class="suggestions-list">
-	<li ng-repeat="suggestion in suggestions" ng-click="">{{suggestion}}</li>
+	<li ng-repeat="suggestion in suggestions" >{{suggestion}}</li>
 </ul>

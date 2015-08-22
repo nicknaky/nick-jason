@@ -12,11 +12,12 @@ app.controller("MainCtrl", ["$scope", function($scope) {
 app.directive("searchInput", function() {
   return {
     scope: {
-      var1: "=suggestions"
+      placesMode: "=googlePlaces",
+      apiKey: "=googlePlacesApi"
     },
     templateUrl: 'AutoCompleteInput.html',
     link: function(scope) {
-      scope.
+
     }
   };
 });
