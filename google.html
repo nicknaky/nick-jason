@@ -1,7 +1,7 @@
  <!DOCTYPE html>
     <html>
       <head>
-               <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
         <script>
             var autocomplete;
@@ -16,8 +16,16 @@
         </script>
       </head>
       <body onload="initialize()">
-        <div id="locationField">
-          <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+        <div >
+          <input id="autocomplete" placeholder="Enter your address" type="text"></input>
+
+          <search-input 
+            input-data="dataList"
+            google-places="googlePlaces" 
+            api-key="{{API}}">
+          </search-input>
+
+
         </div>
       </body>
     </html>

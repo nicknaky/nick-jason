@@ -1,6 +1,7 @@
 
 <span>Search:</span>
-<input type="text" placeholder="Start Typing" id="searchInput" name="search" ng-model="searchText" ng-keyup="query(searchText)">
+<input id="autocomplete"
+type="text" placeholder="Start Typing" name="search" ng-model="searchText" ng-keyup="query(searchText)" >
 <p>google-places is set to: {{placesMode}}</p>
 <p>API key is: {{apiKey}}</p>
 <p>You are searching for: {{searchText}}</p>
@@ -10,3 +11,27 @@
 </ul>
 <ul id="resultsList">
 	</ul>
+
+
+   <!--  <html>
+      <head>
+               <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script>
+            var autocomplete;
+            function initialize() {
+              autocomplete = new google.maps.places.Autocomplete(
+                  // * @type {HTMLInputElement} 
+                  (document.getElementById('autocomplete')),
+                  { types: ['geocode'] });
+              google.maps.event.addListener(autocomplete, 'place_changed', function() {
+              });
+            }
+        </script>
+      </head>
+      <body onload="initialize()">
+        <div id="locationField">
+          <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+        </div>
+      </body>
+    </html> -->

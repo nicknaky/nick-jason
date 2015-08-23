@@ -10,10 +10,12 @@
 <body ng-app="myApp" ng-controller="MainCtrl">
 
 	<p>hi {{test}}</p>
+	<label>Enable Google Places Search:
+	<input type="checkbox" ng-model="googlePlaces">
+</label> <br></br>
 	<search-input 
 		input-data="dataList"
-
-		google-places="false" 
+		google-places="googlePlaces" 
 		api-key="{{API}}">
 	</search-input>
 	
